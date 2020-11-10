@@ -7,9 +7,9 @@ let events = new mongo.Schema({
   organizer: { type: String, default: "" },
   tickets: [
     {
-      tickedID: { type: Number, default: 0 },
+      ticketID: { type: Number, default: 0 },
       ticketNumber: { type: Number, default: 0 },
-      Price: { type: Number, default: 0 },
+      price: { type: Number, default: 0 },
       addedOn: { type: Number, default: 0 },
     },
   ],
