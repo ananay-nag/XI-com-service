@@ -16,11 +16,14 @@ let events = new mongo.Schema({
   addedOn: { type: Number, default: 0 },
   modifiedOn: { type: Number, default: 0 },
 });
+// non-static
 events.method({
   saveDocument: function () {
     return this.save();
   },
 });
+
+// static
 events.static({
   getDocument: function (doc) {
     return this.findOne(doc);
